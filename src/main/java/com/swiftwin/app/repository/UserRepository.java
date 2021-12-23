@@ -7,5 +7,5 @@ import com.swiftwin.app.entity.UserDtls;
 public interface UserRepository extends JpaRepository<UserDtls, Integer>{
 
 	
-	
+	public UserDtls findByEmail(String em);
 }
