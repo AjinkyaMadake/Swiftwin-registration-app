@@ -28,13 +28,13 @@
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home
+				<li class="nav-item active"><a class="nav-link" href="#">
 						<span class="sr-only">(current)</span>
 				</a></li>
 
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
-				<a href="#" class="btn btn-light my-2 my-sm-0 mr-1" type="submit">Name</a>
+				
 				<a th:href="@{/logout}" class="btn btn-light my-2 my-sm-0" type="submit">Logout</a>
 			</form>
 		</div>
@@ -47,11 +47,11 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card">
 					<div class="card-body">
-						<h1>Home</h1>
-						<h5>Name=[[${fullname}]]</h5>
-						<h5>Address=[[${address}]]</h5>
-						<h5>Email=[[${email}]]</h5>
 						
+						<h1> logged in successfully..</h1>
+						<h5>Name=[[${fullName}]]</h5>
+						<h5>Email=[[${address}]]</h5>
+						<h5>Email=[[${em}]]</h5>
 					</div>
 				</div>
 			</div>
