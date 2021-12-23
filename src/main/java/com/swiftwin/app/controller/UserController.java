@@ -32,10 +32,10 @@ public class UserController {
 		return "login";
 	}
 	
-
+	// for sign up page
 	@GetMapping("/Signup")
 	public String signup() {
-		return "index";
+		return "index.html";
 	}
 	
 	//mapping with registration form
