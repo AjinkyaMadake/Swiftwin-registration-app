@@ -14,7 +14,7 @@ import com.swiftwin.app.entity.UserDtls;
 
 public class CustomUserDtls  implements UserDetails {
 
-	
+	//custom user details
 	
 	@Autowired
 	private UserDtls u;   // to get username password 
