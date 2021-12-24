@@ -33,9 +33,14 @@
 				</a></li>
 
 			</ul>
+
 			<form class="form-inline my-2 my-lg-0">
 				<a href="login" class="btn btn-light my-2 my-sm-0 mr-1" type="submit">Login</a>
 			
+
+			<form   class="form-inline my-2 my-lg-0">
+				<a href="Signup" class="btn btn-success my-2 my-sm-0" type="submit">Signup</a>
+
 			</form>
 		</div>
 	</nav>
@@ -47,64 +52,33 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card">
 					<div class="card-body">
-						<h3 class="text-center">Registartion Form</h3>
+						<h3 class="text-center">Login Form</h3>
 
-						<!--alert message  -->
-						<div th:if="${session.message}"
-							th:classappend="${session.message}"
-							class="alert alert-success" role="alert">
-
-							<p th:text="${session.message}"></p>
-							<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+						<div th:if="${param.logout}">
+							<h5 class="text-center text-success">Logout Sucessfully</h5>
 						</div>
 
-						<form th:action="@{/register}" th:object="${user}" method="post">
-							<div class="form-group">
-								<label for="exampleInputEmail1">Full Name</label> <input
-									type="text" class="form-control" id="exampleInputEmail1"
-									name="fullname" aria-describedby="emailHelp" required>
-							</div>
-
-							<div class="form-group">
-								<label for="exampleInputEmail1">Gender</label>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="gender"
-										id="inlineRadio1" value="male"> <label
-										class="form-check-label" for="inlineRadio1">Male</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="gender"
-										id="inlineRadio2" value="female"> <label
-										class="form-check-label" for="inlineRadio2">Female</label>
-								</div>
-							</div>
+						<div th:if="${param.error}">
+							<h5 class="text-danger text-success">Inavlid Username And Password</h5>
+						</div>
 
 
-							<div class="form-group">
-								<label for="exampleInputEmail1">DOB</label> <input type="date"
-									class="form-control" id="exampleInputEmail1" name="dob"
-									aria-describedby="emailHelp" required>
-							</div>
-
-							<div class="form-group">
-								<label for="exampleInputEmail1">Address</label> <input
-									type="text" class="form-control" id="exampleInputEmail1"
-									name="address" aria-describedby="emailHelp" required>
-							</div>
-
+						<form th:action="@{/dologin}" method="post">
 							<div class="form-group">
 								<label for="exampleInputEmail1">Email address</label> <input
 									type="email" class="form-control" id="exampleInputEmail1"
-									name="email" aria-describedby="emailHelp" required>
+									aria-describedby="emailHelp" placeholder="Enter email"
+									name="username">
+
 							</div>
 							<div class="form-group">
 								<label for="exampleInputPassword1">Password</label> <input
 									type="password" class="form-control" id="exampleInputPassword1"
-									required name="password">
+									placeholder="Password" name="password">
 							</div>
-							<button type="submit" class="btn btn-primary">Register</button>
-						</form>
 
+							<button type="submit" class="btn btn-primary">Login</button>
+						</form>
 					</div>
 				</div>
 			</div>

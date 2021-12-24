@@ -35,7 +35,7 @@ public class UserController {
 	// for sign up page
 	@GetMapping("/Signup")
 	public String signup() {
-		return "index.html";
+		return "login.html";
 	}
 	
 	//mapping with registration form
