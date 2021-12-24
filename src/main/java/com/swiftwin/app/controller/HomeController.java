@@ -29,7 +29,7 @@ public class HomeController {
 		UserDtls u=repo.findByEmail(em); 
 		m.addAttribute("user",u);
 		// passing logged in information of the user to the home page
-		m.addAttribute("fullName", u.getFullname());
+		m.addAttribute("fullname", u.getFullname());
 		m.addAttribute("address", u.getAddress());
 		m.addAttribute("em", u.getEmail());
 		return "home";
